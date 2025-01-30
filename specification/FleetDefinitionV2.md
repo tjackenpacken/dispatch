@@ -56,7 +56,7 @@ Only valid enumerations from the list below shall be used as **Equipment Type**:
 ```
 
 ### FleetDefinitionV2 Message Example
-```
+```json
 
 {
   "Protocol": "ISO23725",
