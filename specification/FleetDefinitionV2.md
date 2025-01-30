@@ -1,54 +1,32 @@
-# Fleet Definition Message
+# FleetDefinitionV2
 
-## Overview
+This message is the first message sent by both actors at connection. 
 
-The **Fleet Definition Message** shall be the first message sent by both actors upon connection.
+|Sender| Triggered by | 
+|---|---|
+|`AHS` |  At Connection |
+|`AHS` |  At Runtime change |
+|`FMS` |  At Connection |
+|`FMS` |  At Runtime change |
 
-Actors shall be able to receive and process a new fleet definition message with updated content at runtime.  
-This message shall be re-sent by an actor when the list of monitored machines changes. The list can change by adding, deleting, or modifying a machine.  
 
-Both actors shall use the same **GUID** and an equivalent description for the same physical machine, ensuring semantic consistency across systems.  
-Only the actor owning the modified list shall send an updated **Fleet Definition Message**.
 
-## Fleet Definition Message Initiator and Trigger
+## Message attributes
 
-| Trigger Condition  | AHS to FMS | FMS to AHS |
-|-------------------|------------|------------|
-| At connection    | ✅ Yes      | ✅ Yes      |
-| Runtime change   | ✅ Yes      | ✅ Yes      |
+| key             |  format            | Description                                                             
+|-------------------|------------|----------------|
+| `"AHSId"`         | GUID           | Unique identifier for the AHS instance                                  |
+| `"Equipment"`      | Array of objects | Collection of equipment objects (can be empty but **not null**)         |
+| `"EquipmentId"`     | GUID           | Unique key used in messages to reference a specific equipment           | 
+|`"HID"`            | String         | Human-readable label (only meaningful to people)                        | 
+|`"Type"`           | Enumeration    | Equipment category                                                      | 
+| `"OEM"`          | String         | Original Equipment Manufacturer                                         | 
+| `"Model"`       | String         | OEM model number/name                                                   | 
+| `"Autonomous"`      | Boolean        | Indicates autonomy capability                                           | 
+| `"Length"`            | Decimal        | Distance from front to rear in meters                                   | 
+| `"Width"`            | Decimal        | Distance from left to right in meters                                   | 
 
-> **Note:**  
-> The purpose of this message is to detect discrepancies between the AHS and FMS fleet configurations.  
-> It helps end-users complete machine definitions within their respective systems.  
-> This message **does not** synchronize a single source of equipment definition but serves as an alert mechanism.
 
----
-
-## Fleet Definition Message Structure
-
-The content of a **Fleet Definition Message** must comply with the following structure:
-
-### Table: Fleet Definition Structure
-
-| Member             | Req. Level | Type            | Description                                                             | Example |
-|-------------------|------------|----------------|-------------------------------------------------------------------------|---------|
-| **FleetDefinitionV2** | shall      | Object         | Identifies this structure as a Fleet Definition                          | —       |
-| **AHSId**         | shall      | GUID           | Unique identifier for the AHS instance                                  | `5318e44c-e9f0-42e2-9965-a4a1ff364f4b` |
-| **Equipment**     | shall      | Array of objects | Collection of equipment objects (can be empty but **not null**)         | `[ ]`   |
-| **EquipmentId**   | shall      | GUID           | Unique key used in messages to reference a specific equipment           | `0c83193f-8772-446a-89c0-a3977e282b8a` |
-| **HID**          | shall      | String         | Human-readable label (only meaningful to people)                        | `LV033`, `"Bucyrus 05"` |
-| **Type**         | shall      | Enumeration    | Equipment category                                                      | `HaulTruck`, `Shovel` |
-| **OEM**          | shall      | String         | Original Equipment Manufacturer                                         | `Honda` |
-| **Model**        | shall      | String         | OEM model number/name                                                   | `Civic`, `793D` |
-| **Autonomous**   | shall      | Boolean        | Indicates autonomy capability                                           | `true`, `false` |
-| **Length**       | shall      | Decimal        | Distance from front to rear in meters                                   | `4.56` |
-| **Width**        | shall      | Decimal        | Distance from left to right in meters                                   | `1.43` |
-
-> **Note:**  
-> - Editing the fleet (adding, deleting, or modifying a machine) simply updates the **Equipment List** in the Fleet Definition Message.  
-> - **No delete command exists**.
-
----
 
 ## Fleet ID
 
@@ -63,7 +41,7 @@ The content of a **Fleet Definition Message** must comply with the following str
 
 ---
 
-## Equipment Type
+### Equipment Type Enumerations
 
 Only valid enumerations from the list below shall be used as **Equipment Type**:
 
@@ -75,12 +53,15 @@ Only valid enumerations from the list below shall be used as **Equipment Type**:
   "EmergencyVehicle", "Ambulance", "Dragline", "SurfaceMiner", 
   "Bus", "Train", "Trailer"
 }
+```
 
+### FleetDefinitionV2 Message Example
+```
 
 {
   "Protocol": "ISO23725",
   "Version": 1,
-  "Timestamp": "2018-10-31T09:30:10.43.511Z",
+  "Timestamp": "2025-01-30T11:20:13.511Z",
   "FleetDefinitionV2": {
     "AHSId": "5318e44c-e9f0-42e2-9965-a4a1ff364f4b",
     "Equipment": [
@@ -88,11 +69,11 @@ Only valid enumerations from the list below shall be used as **Equipment Type**:
         "EquipmentId": "0c83193f-8772-446a-89c0-a3977e282b8a",
         "HID": "HT042",
         "Type": "HaulTruck",
-        "OEM": "ETF",
-        "Model": "Virtual-F",
+        "OEM": "Scania",
+        "Model": "ATS",
         "Autonomous": true,
-        "Length": 14.57,
-        "Width": 9.02
+        "Length": 9.51,
+        "Width": 2.55
       },
       {
         "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
@@ -107,3 +88,4 @@ Only valid enumerations from the list below shall be used as **Equipment Type**:
     ]
   }
 }
+```
