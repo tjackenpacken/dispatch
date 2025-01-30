@@ -8,12 +8,12 @@ This section will explain the Dispatch service requirements, use cases and speci
 <br>
 
 # Introduction
-This repo is dedicated to documenting the Dispatch service, one of the services used in the open-autonomy family and also included in ISO23725
+This repo is dedicated to documenting the Dispatch service, one of the services used in the open-autonomy family
 
 <br>
 
 # Dispatch Service Purpose
-The dispatc service handles the parts involving dispatching trucks from the FMS to the AHS system. 
+The dispatch service handles the parts involving dispatching trucks from the FMS to the AHS system. 
 
 <br>
 
