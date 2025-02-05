@@ -16,13 +16,13 @@ This message is the first message sent by both actors at connection.
 | key             |  format            | Description                                                             
 |-------------------|------------|----------------|
 | `"AHSId"`         | GUID           | Unique identifier for the AHS instance                                  |
-| `"Equipment"`      | Array of objects | Collection of equipment objects (can be empty but **not null**)         |
-| `"EquipmentId"`     | GUID           | Unique key used in messages to reference a specific equipment           | 
-|`"HID"`            | String         | Human-readable label (only meaningful to people)                        | 
-|`"Type"`           | Enumeration    | Equipment category                                                      | 
+| `"Equipment"`      | Array of objects | List of equipments. Can be empty but not null        |
+| `"EquipmentId"`     | GUID           | Unique key for the specific equipment          | 
+|`"HID"`            | String         |  Human readable string (name) for the equipment                    | 
+|`"Type"`           | Enumeration    |  Category (see furhter down)                                                   | 
 | `"OEM"`          | String         | Original Equipment Manufacturer                                         | 
-| `"Model"`       | String         | OEM model number/name                                                   | 
-| `"Autonomous"`      | Boolean        | Indicates autonomy capability                                           | 
+| `"Model"`       | String         | OEM model name                                                   | 
+| `"Autonomous"`      | Boolean        | IAutonomoy or not?                                         | 
 | `"Length"`            | Decimal        | Distance from front to rear in meters                                   | 
 | `"Width"`            | Decimal        | Distance from left to right in meters                                   | 
 
@@ -41,9 +41,9 @@ This message is the first message sent by both actors at connection.
 
 ---
 
-### Equipment Type Enumerations
+### Type Enumerations
 
-Only valid enumerations from the list below shall be used as **Equipment Type**:
+Only valid enumerations from the list below shall be used as **Type**:
 
 ```json
 {
@@ -57,33 +57,32 @@ Only valid enumerations from the list below shall be used as **Equipment Type**:
 
 ### FleetDefinitionV2 Message Example
 ```json
-
 {
-  "Protocol": "ISO23725",
+  "Protocol": "Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-30T11:20:13.511Z",
   "FleetDefinitionV2": {
-    "AHSId": "5318e44c-e9f0-42e2-9965-a4a1ff364f4b",
+    "AHSId": "6c5e8648-7ea5-43bf-942b-2051b4b79d9b",
     "Equipment": [
       {
-        "EquipmentId": "0c83193f-8772-446a-89c0-a3977e282b8a",
+        "EquipmentId": "f4d95a41-831e-4a27-9353-32872b7d6103",
         "HID": "HT042",
         "Type": "HaulTruck",
         "OEM": "Scania",
         "Model": "ATS",
         "Autonomous": true,
         "Length": 9.51,
-        "Width": 2.55
+        "Width": 2.85
       },
       {
-        "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+        "EquipmentId": "3f4964b3-66a2-41ef-89b1-83b5af0da44e",
         "HID": "LV033",
         "Type": "LightVehicle",
-        "OEM": "Ford",
-        "Model": "F350",
+        "OEM": "Toyota",
+        "Model": "Landcruiser",
         "Autonomous": false,
-        "Length": 4.67,
-        "Width": 2.52
+        "Length": 4.97,
+        "Width": 2.44
       }
     ]
   }
