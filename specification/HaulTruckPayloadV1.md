@@ -8,7 +8,7 @@
 
 | Key                  | Req. Level | Type          |  Description                                             |
 |-------------------------|-----------|--------------|---------------------------------------------------------|
-| `"PayloadWeight"`           | shall     | integer   |   Weight in the tray measured in metrick tonnes                   |
+| `"PayloadWeight"`           | shall     | integer   |   Weight in the tray measured in metric tonnes                   |
 | `"Accuracy"`    | should    | decimal     |  Error range estimate, unit i metric tonnes        |
 | `"PayloadSourceId"`     | may     | decimal      | Id of the payload Source, if it is the Machine it self it is null      |
 
