@@ -22,19 +22,19 @@
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-31T09:40:20.511Z",
-  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId": "3f4964b3-66a2-41ef-89b1-83b5af0da44e",
   "HaulTruckAssignmentRequestV2": [
     {
-      "AssignmentId": "eeb723a5-a2a7-4d67-b8c7-b40eb3fa86b6",
+      "AssignmentId": "7a846ede-5048-4529-b820-d6b712b7e113",
       "Task": "Load",
       "DestinationId": 24594,
-      “DestinationEquipmentId”: "6cda9d3d-774d-4a31-b647-9ccc9fd251f3",
+      “DestinationEquipmentId”: "ae9c2b65-3adc-4622-96d8-c261c004ca9d",
       "RouteV1": [
-        {"WayId": -245875},
-        {"WayId": 245896},
-        {"WayId": -245974},
-        {"WayId": 245836},
-        {"WayId": -245878}
+        {"WayId": -456},
+        {"WayId": 457},
+        {"WayId": -458},
+        {"WayId": 459},
+        {"WayId": -460}
       ]
     }
   ]
