@@ -12,7 +12,7 @@
 | `"Response"`    | shall    | enum       |  `{ Accepted, Rejected }`       | 
 | `"Detail"`     | may     | string      |   Human Readable string explaining the reason.   |
 
-# HaulTruckAssignmentRequestV2 Message Example
+# HaulTruckAssignmentResponseV1 Message Example
 ```json
 {
   "Protocol":"Open-Autonomy",
