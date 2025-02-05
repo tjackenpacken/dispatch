@@ -16,12 +16,12 @@
 # MachineAllStopResponseV1 Message Example
 ```json
 {
-  "Protocol":"ISO23725",
+  "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2024-10-31T09:30:10.43.511Z",
   "MachineAllStopResponseV1": {
     "Response": "Accepted",
-    "ModeAllStopId": "0e45793f-f1d0-420b-a1fa-85e3f42a7219",
+    "ModeAllStopId": "cf006a03-e52f-41a7-807a-a9e210e2c16e",
     "Detail": "All machines stopped"
   }
 }
