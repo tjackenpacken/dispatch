@@ -16,12 +16,12 @@
 ### Apply AllStop
 ```json
 {
-  "Protocol":"ISO23725",
+  "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2024-10-31T09:30:10.43.511Z",
+  "Timestamp": "2025-01-31T09:41:12.511Z",
   "MachineAllStopRequestV1": {
     "ModeAllStop": "Apply",
-    "ModeAllStopId": "0e45793f-f1d0-420b-a1fa-85e3f42a7219"
+    "ModeAllStopId": "2920d124-888a-4d93-a5c7-1bf244f4fd50"
   }
 }
 ```
