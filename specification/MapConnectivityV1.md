@@ -6,14 +6,14 @@
 |`AHS` |  At Runtime change |
 
 ## Message attributes
-| Key                     | Req. Level         | Type          | Unit      | Description                                                                                                    | Example |
-|-------------------------|-------------------|--------------|-----------|----------------------------------------------------------------------------------------------------------------|---------|
-| `"MapConnectivityV1"`   | shall             | Object       | —         | Identifies this structure as a Map connectivity                                                               | -       |
-| `"WayId"`              | shall             | Integer      | Unique ID | The ID of the current map object that is being described as connected to.                                     | `12345` |
-| `"WayType"`            | shall             | Enum         | {Road, Area} | The type of map object this is; Either an Area or a Road.                                                     | `"Road"` |
-| `"RoadProperty"`       | Shall when Road   | Object       | —         | See below                                                                                      | -       |
-| `"AreaProperty"`       | Shall when Area   | Object       | —         | See below                                                                                            | -       |
-| `"Connection"`         | shall             | array of WayId | Unique ID | The connection array is a list of other map objects that can be reached from the WayId attribute defined above. This connectivity is **unidirectional**. Defining a connection starting from the WayId attribute above to each individual map object in the connection list. | `[67890, 54321]` |
+| Key                     | Req. Level         | Type          | Unit      | Description                                                                                                    |
+|-------------------------|-------------------|--------------|-----------|----------------------------------------------------------------------------------------------------------------|
+| `"MapConnectivityV1"`   | shall             | Object       | —         | Identifies this structure as a Map connectivity                                                               |
+| `"WayId"`              | shall             | Integer      | Unique ID | The ID of the current map object that is being described as connected to.                                     | 
+| `"WayType"`            | shall             | Enum         | {Road, Area} | The type of map object this is; Either an Area or a Road.                                                     | 
+| `"RoadProperty"`       | Shall when Road   | Object       | —         | See below                                                                                      | 
+| `"AreaProperty"`       | Shall when Area   | Object       | —         | See below                                                                                            | 
+| `"Connection"`         | shall             | Array of WayId | Unique ID | | 
 
 ## RoadProperty
 | Key       | Req. Level | Type    | Unit  | Description           |                                                                             
