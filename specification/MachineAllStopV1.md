@@ -17,12 +17,12 @@
 ### AllStop
 ```json
 {
-  "Protocol":"ISO23725",
+  "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2024-10-31T09:30:10.43.511Z",
+  "Timestamp": "2025-01-31T11:11:10.511Z",
   "MachineAllStopRequestV1": {
     "ModeAllStop": "On",
-    "ModeAllStopId": "0e45793f-f1d0-420b-a1fa-85e3f42a7219"
+    "ModeAllStopId": "fd5fe53b-1716-41aa-9367-bb273eee9b76"
   }
 }
 ```
