@@ -21,7 +21,7 @@
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-31T09:40:20.511Z",
-  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId": "1c558480-cb1c-4bae-bbc7-89b12516aca5",
   "MachineDiagnosticV2": [
     {"ComponentId": 555, "FaultCode": 2110 },
     {"ComponentId": 14, "FaultCode": 9999 }
@@ -47,7 +47,7 @@
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-31T09:40:20.511Z",
-  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId": "1c558480-cb1c-4bae-bbc7-89b12516aca5",
   "MachineDiagnosticV2": [
   ],
   "MachinePositionV1": {
