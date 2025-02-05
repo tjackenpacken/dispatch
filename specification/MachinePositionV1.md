@@ -11,42 +11,42 @@ Send with at least 1Hz and maximum 10Hz
 
 ## Message attributes
 # MachinePositionV1
-| Key              | Req. Level | Type    | Unit      | Description                                                 | Example       |
-|---------------------|-----------|---------|----------|-------------------------------------------------------------|---------------|
-| `"Heading"`        | shall     | integer  | degrees  | Degrees, WGS84 Compass heading in degrees with range 0-359 | `67`          |
-| `"Latitude"`       | shall     | decimal  | degrees  | WGS84 Latitude with a minimum of 6 decimals                | `49.176854`   |
-| `"Longitude"`      | shall     | decimal  | degrees  | WGS84 Longitude with a minimum of 6 decimals               | `-123.071800` |
-| `"Elevation"`      | shall     | decimal  | Meter    | WGS84 Elevation in meters with 2 decimals                  | `175.23`      |
-| `"LatitudeAccuracy"`  | shall     | decimal  | Meter    | Latitude error @ 1 sigma probability                       | `0.06`        |
-| `"LongitudeAccuracy"` | shall     | decimal  | Meter    | Longitude error @ 1 sigma probability                      | `0.07`        |
-| `"ElevationAccuracy"` | shall     | decimal  | Meter    | Elevation error @ 1 sigma probability                      | `0.12`        |
-| `"HeadingAccuracy"`   | shall     | decimal  | degrees  | Heading error @ 1 sigma probability                        | `1.7`         |
-| `"Speed"`         | shall     | integer  | km/h     | Ground speed of the machine                                | `52`          |
-| `"Timestamp"`     | shall     | UTC Time | -        | The timestamp is the time the position was measured        |               |
-| `"Attachment[]"`  | may       | array    | -        | Attachment(s) connected to the main tractor if it applies  |               |
+| Key              | Req. Level | Type    | Unit      | Description                                                 | 
+|---------------------|-----------|---------|----------|-------------------------------------------------------------|
+| `"Heading"`        | shall     | integer  | degrees  | Degrees, range 0-359 |
+| `"Latitude"`       | shall     | decimal  | degrees  | Minimum 6 decimals                | 
+| `"Longitude"`      | shall     | decimal  | degrees  | Minimum 6 decimals               | 
+| `"Elevation"`      | shall     | decimal  | Meter    | Elevation in meters with 2 decimals                  | 
+| `"LatitudeAccuracy"`  | shall     | decimal  | Meter    |                       | 
+| `"LongitudeAccuracy"` | shall     | decimal  | Meter    |                   | 
+| `"ElevationAccuracy"` | shall     | decimal  | Meter    |               | 
+| `"HeadingAccuracy"`   | shall     | decimal  | degrees  |                    | 
+| `"Speed"`         | shall     | integer  | km/h     | Ground speed                            | 
+| `"Timestamp"`     | shall     | UTC Time | -        | Timestamp        | 
+| `"Attachment[]"`  | may       | array    | -        | Attachment (Trailers)  | 
 
 # AttachmentV1
 | Key   | Req. Level | Type    | Unit      | Description                                               |
 |------------------------|-----------|---------|----------|-----------------------------------------------------------|
 | `"EquipmentID"`       | shall     | GUID    | -        | Unique Equipment ID in the fleet                          |
-| `"Heading"`           | shall     | integer  | degrees  | Degrees, WGS84 Compass heading in degrees with range 0-359 |
-| `"Latitude"`          | shall     | decimal  | degrees  | WGS84 Latitude with a minimum of 6 decimals              |
-| `"Longitude"`         | shall     | decimal  | degrees  | WGS84 Longitude with a minimum of 6 decimals             |
-| `"Elevation"`         | shall     | decimal  | meter    | WGS84 Elevation in meters with 2 decimals                |
-| `"LatitudeAccuracy"`  | shall     | decimal  | meter    | Latitude error @ 1 sigma probability                     |
-| `"LongitudeAccuracy"` | shall     | decimal  | meter    | Longitude error @ 1 sigma probability                    |
-| `"ElevationAccuracy"` | shall     | decimal  | meter    | Elevation error @ 1 sigma probability                    |
-| `"HeadingAccuracy"`   | shall     | decimal  | degrees  | Heading error @ 1 sigma probability                      |
-| `"Speed"`            | shall     | integer  | km/h     | Ground speed of the machine                              |
+| `"Heading"`           | shall     | integer  | degrees  | Degrees, range 0-359 |
+| `"Latitude"`          | shall     | decimal  | degrees  | Minimum 6 decimals              |
+| `"Longitude"`         | shall     | decimal  | degrees  | Minimum 6 decimals             |
+| `"Elevation"`         | shall     | decimal  | meter    | Elevation in meters with 2 decimals                |
+| `"LatitudeAccuracy"`  | shall     | decimal  | meter    |                     |
+| `"LongitudeAccuracy"` | shall     | decimal  | meter    |                   |
+| `"ElevationAccuracy"` | shall     | decimal  | meter    |                    |
+| `"HeadingAccuracy"`   | shall     | decimal  | degrees  |            |
+| `"Speed"`            | shall     | integer  | km/h     | Ground speed of the attachment (Trailer)                            |
 
 # MachinePosition Message Example
 ### Parked Machine
 ```json
 {
-  "Protocol":"ISO23725",
+  "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2024-10-31T09:30:10.43511Z",
-  "EquipmentId":"2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId":"4397592b-d3db-420c-b830-9600529d0aab",
   "MachinePositionV1":
   {
     "Heading": 211,
@@ -65,13 +65,13 @@ Send with at least 1Hz and maximum 10Hz
 ### Machine with Trailer
 ```json
 {
-  "Protocol":"ISO23725",
+  "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2018-10-31T09:30:10.43511Z",
-  "EquipmentId":"2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "Timestamp": "2024-10-31T09:30:10.43511Z",
+  "EquipmentId":"4397592b-d3db-420c-b830-9600529d0aab",
   "MachinePositionV1":
   {
-    "Heading": 211,
+    "Heading": 222,
     "Latitude": 49.176854,
     "Longitude": -123.0718,
     "Elevation": 175.23,
@@ -84,8 +84,8 @@ Send with at least 1Hz and maximum 10Hz
     "AttachmentV1":
     [
       {
-        "EquipmentId": "e66c739e-b5f3-41f2-8bbb-5a29875ae70d",
-        "Heading": 220,
+        "EquipmentId": "6c4b32e4-aa31-428d-9eab-0a2206bac2b0",
+        "Heading": 221,
         "Latitude": 49.176812,
         "Longitude": -123.071783,
         "Elevation": 175.18,
