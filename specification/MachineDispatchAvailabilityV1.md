@@ -9,7 +9,7 @@
 
 | Key                  | Req. Level | Type          | Unit  | Description                                             | Example   |
 |-------------------------|-----------|--------------|------|---------------------------------------------------------|-----------|
-| `"DispatchingCustodian"`           | shall     | enum      | { FMS, AHS }  | `FMS`      |
+| `"DispatchingCustodian"`           | shall     | enum      | `{ FMS, AHS }`  | `FMS`      |
 
 
 
@@ -19,7 +19,7 @@
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-31T09:40:20.511Z",
-  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId": "4397592b-d3db-420c-b830-9600529d0aab",
   "MachineDispatchAvailabilityV1": {
     "DispatchingCustodian":"FMS"
   }
