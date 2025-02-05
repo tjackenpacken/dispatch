@@ -16,7 +16,7 @@
 ```json
 {
   "Protocol":"Open-Autonomy",
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "HaulTruckAssignmentResponseV1": [
     {

@@ -60,7 +60,7 @@ Only valid enumerations from the list below shall be used as **Type**:
 {
   "Protocol": "Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-30T11:20:13.511Z",
+  "Timestamp": "2025-01-30T11:20:13.316Z",
   "FleetDefinitionV2": {
     "AHSId": "6c5e8648-7ea5-43bf-942b-2051b4b79d9b",
     "Equipment": [

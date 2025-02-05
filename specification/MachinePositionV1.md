@@ -45,7 +45,7 @@ Send with at least 1Hz and maximum 10Hz
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2024-10-31T09:30:10.43511Z",
+  "Timestamp": "2024-10-31T09:30:10.43316Z",
   "EquipmentId":"4397592b-d3db-420c-b830-9600529d0aab",
   "MachinePositionV1":
   {
@@ -67,7 +67,7 @@ Send with at least 1Hz and maximum 10Hz
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2024-10-31T09:30:10.43511Z",
+  "Timestamp": "2024-10-31T09:30:10.43316Z",
   "EquipmentId":"4397592b-d3db-420c-b830-9600529d0aab",
   "MachinePositionV1":
   {

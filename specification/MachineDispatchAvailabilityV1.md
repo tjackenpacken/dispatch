@@ -18,13 +18,13 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "4397592b-d3db-420c-b830-9600529d0aab",
   "MachineDispatchAvailabilityV1": {
     "DispatchingCustodian":"FMS"
   }
   "MachinePositionV1": {
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "Heading":"222",
   "Latitude":"65.176854",
   "Longitude":"-23.071800",

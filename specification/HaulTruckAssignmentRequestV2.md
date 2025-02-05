@@ -21,7 +21,7 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "3f4964b3-66a2-41ef-89b1-83b5af0da44e",
   "HaulTruckAssignmentRequestV2": [
     {

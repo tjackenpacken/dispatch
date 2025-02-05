@@ -18,7 +18,7 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "eae43356-3c42-4929-9a5a-49460f152acf",
   "HaulTruckProductionStateV2": {
     "AssignmentId": "eeb723a5-a2a7-4d67-b8c7-b40eb3fa86b6",
@@ -27,7 +27,7 @@
     "ProductionState": "Hauling"
   },
   "MachinePositionV1": {
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "Heading":"222",
   "Latitude":"65.176854",
   "Longitude":"-23.071800",

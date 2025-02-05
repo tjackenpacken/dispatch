@@ -25,7 +25,7 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2024-10-31T09:30:10.511Z",
+  "Timestamp": "2024-10-31T09:30:10.316Z",
   "EquipmentId": "f4d95a41-831e-4a27-9353-32872b7d6103",
   "BasicMachineHealthV2": {
   "FuelLevel": 74,

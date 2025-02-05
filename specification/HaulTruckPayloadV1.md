@@ -16,16 +16,16 @@
 # HaulTruckPayloadV1 Message Example
 ```json
 {
-  "Protocol":"ISO23725 ",
+  "Protocol":"Open-Autonomy ",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "0c83193f-8772-446a-89c0-a3977e282b8a ",
   "HaulTruckPayloadV1": {
     "PayloadWeight": 65,
     "Accuracy": 3
   },
   "MachinePositionV1": {
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "Heading":"222",
   "Latitude":"65.176854",
   "Longitude":"-23.071800",

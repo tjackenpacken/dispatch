@@ -20,14 +20,14 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "1c558480-cb1c-4bae-bbc7-89b12516aca5",
   "MachineDiagnosticV2": [
     {"ComponentId": 555, "FaultCode": 2110 },
     {"ComponentId": 14, "FaultCode": 9999 }
   ],
   "MachinePositionV1": {
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "Heading":"222",
   "Latitude":"65.176854",
   "Longitude":"-23.071800",
@@ -46,12 +46,12 @@
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "EquipmentId": "1c558480-cb1c-4bae-bbc7-89b12516aca5",
   "MachineDiagnosticV2": [
   ],
   "MachinePositionV1": {
-  "Timestamp": "2025-01-31T09:40:20.511Z",
+  "Timestamp": "2025-01-31T09:40:20.316Z",
   "Heading":"222",
   "Latitude":"65.176854",
   "Longitude":"-23.071800",
