@@ -19,11 +19,11 @@
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2025-01-31T09:40:20.511Z",
-  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+  "EquipmentId": "eae43356-3c42-4929-9a5a-49460f152acf",
   "HaulTruckProductionStateV2": {
     "AssignmentId": "eeb723a5-a2a7-4d67-b8c7-b40eb3fa86b6",
-    "WayId": 750321442,
-    "AutonomyMode": "Manual",
+    "WayId": 546,
+    "AutonomyMode": "Autonomous",
     "ProductionState": "Hauling"
   },
   "MachinePositionV1": {
