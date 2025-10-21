@@ -17,7 +17,7 @@
 ### Array Of `[ ]`
 | Key             | Req. Level | Type    | Unit  | Description                            | 
 |-------------------|-----------|--------|------|--------------------------------|
-| `"TirePosition"`  | shall     | string  | -    |           |       
+| `"TirePosition"`  | shall     | string  | -    | Tire position identifier, as defined in ISO 23725:2023, Clause 4.2.5     |       
 | `"TirePressure"`  | shall     | integer | kPa  | Pressure for the actual tire. If unavailable or sensor error, the value shall be null.      |
 | `"TireTemperature"` | shall     | integer | °C   | Temperature for the actual tire. If unavailable or sensor error, the value shall be null.       |
 > [!NOTE]
