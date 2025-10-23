@@ -13,7 +13,6 @@
 | Key                  | Req. Level | Type          | Unit  | Description                                             |
 |-------------------------|-----------|--------------|------|---------------------------------------------------------|
 | `"FuelLevel"`           | shall     | integer      | %    | Current Fuel level as percentage of full capacity. Range 0-100.    |
-| `"AdBlueLevel"`         | should    | integer      | %    | Current AdBlue (Diesel Exhaust Fluid) level as percentage of full capacity. Range 0-100.  |
 | `"TotalMachineHour"`    | should    | decimal      | h    | Number of hours the Machine has been running.       |
 | `"TotalEngineHour"`     | shall     | decimal      | h    | Number of hours the Engine has been running.        | 
 | `"Tire"`               | should    | Object Array | -    | A list of tire information       | 
@@ -34,7 +33,6 @@
   "EquipmentId": "f4d95a41-831e-4a27-9353-32872b7d6103",
   "BasicMachineHealthV2": {
   "FuelLevel": 74,
-  "AdBlueLevel": null,
   "TotalMachineHour": 4511.4,
   "TotalEngineHour": 93.1,
   "Tire": [
